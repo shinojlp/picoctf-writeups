@@ -26,7 +26,7 @@ picoctf-writeups/
 
 | Challenge                | Category         | Difficulty | Vulnerability                  |
 | ------------------------ | ---------------- | ---------- | ------------------------------ |
-| [SSTI1](./easy/SSTI1.md) | Web Exploitation | Easy       | Server-Side Template Injection |
+| [SSTI1](./easy/SST1.md) | Web Exploitation | Easy       | Server-Side Template Injection |
 
 ---
 
