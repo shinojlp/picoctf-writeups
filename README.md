@@ -1,6 +1,6 @@
 # PicoCTF Writeups
 
-A collection of my picoCTF challenge writeups as I learn offensive security and web application penetration testing.
+A collection of my picoCTF challenge writeups documenting my learning journey in offensive security and web application penetration testing.
 
 ## About
 
@@ -26,23 +26,35 @@ picoctf-writeups/
 
 | Challenge                | Category         | Difficulty | Vulnerability                  |
 | ------------------------ | ---------------- | ---------- | ------------------------------ |
-| [SSTI1](./easy/SST1.md) | Web Exploitation | Easy       | Server-Side Template Injection |
+| [SSTI1](./easy/SSTI1.md) | Web Exploitation | Easy       | Server-Side Template Injection |
+| [IntroToBurp](./easy/IntroToBurp.md) | Web Exploitation | Easy       | Improper CSRF Token Validation |
 
 ---
 
 ## Skills Practiced
 
-* Web Application Security
-* Server-Side Template Injection (SSTI)
-* Burp Suite
-* Linux Command Line
+- Web Application Security
+- HTTP Request Interception
+- Server-Side Template Injection (SSTI)
+- Authentication Bypass
+- Burp Suite
+- Linux Command Line
+
+---
+
+## Tools Used
+
+- Burp Suite
+- Browser Developer Tools
+- Linux CLI
 
 ---
 
 ## Connect
 
-* LinkedIn: https://linkedin.com/in/shinojlp
-* GitHub: https://github.com/shinojlp
+- [LinkedIn](https://linkedin.com/in/shinojlp)
+- [GitHub](https://github.com/shinojlp)
+- [TryHackMe](https://tryhackme.com/p/casket34)
 
 ---
 
